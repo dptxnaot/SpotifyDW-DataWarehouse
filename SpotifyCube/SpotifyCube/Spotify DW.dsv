@@ -1,0 +1,223 @@
+﻿<DataSourceView xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="acabf5a1-0c87-4b54-bda4-c8475235101e" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Spotify DW</ID>
+  <Name>Spotify DW</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:CurrentLayout</Name>
+      <Value>_ALL_TABLES_</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:SchemaRestriction</Name>
+      <Value></Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:RetrieveRelationships</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:Layouts</Name>
+      <Value>
+        <Layouts xmlns="">
+          <Diagram>
+            <Name>_ALL_TABLES_</Name>
+            <DiagramLayout />
+            <ShowRelationshipNames>False</ShowRelationshipNames>
+            <UseDiagramDefaultLayout>True</UseDiagramDefaultLayout>
+            <DiagramViewPortLeft>0</DiagramViewPortLeft>
+            <DiagramViewPortTop>0</DiagramViewPortTop>
+            <DiagramBoundingLeft>0</DiagramBoundingLeft>
+            <DiagramBoundingTop>0</DiagramBoundingTop>
+            <DiagramZoom>100</DiagramZoom>
+          </Diagram>
+        </Layouts>
+      </Value>
+    </Annotation>
+  </Annotations>
+  <DataSourceID>Spotify DW</DataSourceID>
+  <Schema>
+    <xs:schema id="Spotify_x0020_DW" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop">
+      <xs:element name="Spotify_x0020_DW" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:design-time-name="39a2998c-a105-41e9-b9d2-84d298a828f2">
+        <xs:complexType>
+          <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:element name="dbo_Dim_Artist" msprop:DbTableName="Dim_Artist" msprop:FriendlyName="Dim_Artist" msprop:TableType="Table" msprop:DbSchemaName="dbo" msprop:design-time-name="bbeb3725-a252-48bd-ae35-7f2e76042d9b">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="ArtistKey" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:FriendlyName="ArtistKey" msprop:DbColumnName="ArtistKey" msprop:design-time-name="c2a547bf-68b5-4300-bed3-063eaadc7d64" type="xs:int" />
+                  <xs:element name="ArtistName" msprop:FriendlyName="ArtistName" msprop:DbColumnName="ArtistName" msprop:design-time-name="dc073696-860a-4020-a8fd-63187c6a1ba4">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="500" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="ArtistCount" msprop:FriendlyName="ArtistCount" msprop:DbColumnName="ArtistCount" msprop:design-time-name="ab9c8224-c138-47e0-8872-8347527db61e" type="xs:int" minOccurs="0" />
+                  <xs:element name="IsCollab" msprop:FriendlyName="IsCollab" msprop:DbColumnName="IsCollab" msprop:design-time-name="7719c0c1-f02b-4636-8f25-150db8b58093" type="xs:boolean" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_Dim_AudioFeature" msprop:DbTableName="Dim_AudioFeature" msprop:FriendlyName="Dim_AudioFeature" msprop:TableType="Table" msprop:DbSchemaName="dbo" msprop:design-time-name="ee67f09e-07f4-436c-b048-dd06b0fc38ad">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="AudioFeatureKey" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:FriendlyName="AudioFeatureKey" msprop:DbColumnName="AudioFeatureKey" msprop:design-time-name="664bc34f-053a-472c-aa5f-ece2bbecb18a" type="xs:int" />
+                  <xs:element name="BPM" msprop:FriendlyName="BPM" msprop:DbColumnName="BPM" msprop:design-time-name="57687816-0825-4b82-9c04-792e94b70560" type="xs:int" minOccurs="0" />
+                  <xs:element name="Key" msprop:FriendlyName="Key" msprop:DbColumnName="Key" msprop:design-time-name="e4940e2a-a19e-484d-b1cd-a748feade30b" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="5" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Mode" msprop:FriendlyName="Mode" msprop:DbColumnName="Mode" msprop:design-time-name="72f3bb72-ed7a-47f8-a25c-e986ff894cc4" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="10" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Danceability_Pct" msprop:FriendlyName="Danceability_Pct" msprop:DbColumnName="Danceability_Pct" msprop:design-time-name="b00a7d1e-930b-48dc-91c6-cb8bce1abae7" type="xs:int" minOccurs="0" />
+                  <xs:element name="Valence_Pct" msprop:FriendlyName="Valence_Pct" msprop:DbColumnName="Valence_Pct" msprop:design-time-name="2c54f716-f7f3-436e-9f64-061a8826a29a" type="xs:int" minOccurs="0" />
+                  <xs:element name="Energy_Pct" msprop:FriendlyName="Energy_Pct" msprop:DbColumnName="Energy_Pct" msprop:design-time-name="9fda762f-58ac-4c5b-8c03-a7eac8b385fa" type="xs:int" minOccurs="0" />
+                  <xs:element name="Acousticness_Pct" msprop:FriendlyName="Acousticness_Pct" msprop:DbColumnName="Acousticness_Pct" msprop:design-time-name="7a65e593-6153-4dac-96cf-ec43e81c9dae" type="xs:int" minOccurs="0" />
+                  <xs:element name="Instrumentalness_Pct" msprop:FriendlyName="Instrumentalness_Pct" msprop:DbColumnName="Instrumentalness_Pct" msprop:design-time-name="5b9fb8e4-a22c-4a7d-a354-36ff4b0f2359" type="xs:int" minOccurs="0" />
+                  <xs:element name="Liveness_Pct" msprop:FriendlyName="Liveness_Pct" msprop:DbColumnName="Liveness_Pct" msprop:design-time-name="f95d7c07-1450-4ba9-8f4b-1ff241899bfd" type="xs:int" minOccurs="0" />
+                  <xs:element name="Speechiness_Pct" msprop:FriendlyName="Speechiness_Pct" msprop:DbColumnName="Speechiness_Pct" msprop:design-time-name="ff4d0881-af0f-4878-b58b-df0838c30996" type="xs:int" minOccurs="0" />
+                  <xs:element name="BPM_Group" msprop:FriendlyName="BPM_Group" msprop:DbColumnName="BPM_Group" msprop:design-time-name="08dce6e7-def0-4ba3-9f80-e1de3619cf0d" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_Dim_Platform" msprop:DbTableName="Dim_Platform" msprop:FriendlyName="Dim_Platform" msprop:TableType="Table" msprop:DbSchemaName="dbo" msprop:design-time-name="1d36562c-ee07-4f52-a232-f48798ad3479">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="PlatformKey" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:FriendlyName="PlatformKey" msprop:DbColumnName="PlatformKey" msprop:design-time-name="2312c7ec-5751-433f-a9f4-ac69b5eec803" type="xs:int" />
+                  <xs:element name="InApplePlaylists" msprop:FriendlyName="InApplePlaylists" msprop:DbColumnName="InApplePlaylists" msprop:design-time-name="06adcbf4-deda-407e-9aeb-860d2451afb2" type="xs:int" minOccurs="0" />
+                  <xs:element name="InAppleCharts" msprop:FriendlyName="InAppleCharts" msprop:DbColumnName="InAppleCharts" msprop:design-time-name="603e741b-c564-40d7-9a5d-b4a0968467e3" type="xs:int" minOccurs="0" />
+                  <xs:element name="InDeezerPlaylists" msprop:FriendlyName="InDeezerPlaylists" msprop:DbColumnName="InDeezerPlaylists" msprop:design-time-name="3c05d4c1-6930-4029-9794-905b1dd323b1" type="xs:int" minOccurs="0" />
+                  <xs:element name="InDeezerCharts" msprop:FriendlyName="InDeezerCharts" msprop:DbColumnName="InDeezerCharts" msprop:design-time-name="f7aae4ee-e104-440a-89c0-ec091de1128f" type="xs:int" minOccurs="0" />
+                  <xs:element name="InShazamCharts" msprop:FriendlyName="InShazamCharts" msprop:DbColumnName="InShazamCharts" msprop:design-time-name="67d06192-3761-4179-956a-91be274575ab" type="xs:int" minOccurs="0" />
+                  <xs:element name="IsOnAllPlatforms" msprop:FriendlyName="IsOnAllPlatforms" msprop:DbColumnName="IsOnAllPlatforms" msprop:design-time-name="b1f3c3fb-8c60-4b44-ab6a-5595d8acd23a" type="xs:boolean" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_Dim_Time" msprop:DbTableName="Dim_Time" msprop:FriendlyName="Dim_Time" msprop:TableType="Table" msprop:DbSchemaName="dbo" msprop:design-time-name="c6237daf-59a5-4719-b939-db072535ee95">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="TimeKey" msprop:FriendlyName="TimeKey" msprop:DbColumnName="TimeKey" msprop:design-time-name="84f3decd-38c2-469b-9220-9fd61a278762" type="xs:int" />
+                  <xs:element name="FullDate" msprop:FriendlyName="FullDate" msprop:DbColumnName="FullDate" msprop:design-time-name="bab69f83-ff80-434b-87c2-c286b2e07112" type="xs:dateTime" minOccurs="0" />
+                  <xs:element name="Day" msprop:FriendlyName="Day" msprop:DbColumnName="Day" msprop:design-time-name="1549b39a-7b77-44a4-8576-201a9f1db861" type="xs:int" minOccurs="0" />
+                  <xs:element name="Month" msprop:FriendlyName="Month" msprop:DbColumnName="Month" msprop:design-time-name="faac20b3-b263-439a-9ff4-6184e3a59444" type="xs:int" minOccurs="0" />
+                  <xs:element name="MonthName" msprop:FriendlyName="MonthName" msprop:DbColumnName="MonthName" msprop:design-time-name="76fdee50-c567-4fdf-99e4-e01908d8942f" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Quarter" msprop:FriendlyName="Quarter" msprop:DbColumnName="Quarter" msprop:design-time-name="6ee2f8a9-4af8-4422-a472-2fd61011fcb2" type="xs:int" minOccurs="0" />
+                  <xs:element name="Year" msprop:FriendlyName="Year" msprop:DbColumnName="Year" msprop:design-time-name="be97bc09-b37e-42e5-8a30-d298867c895d" type="xs:int" minOccurs="0" />
+                  <xs:element name="DayOfWeek" msprop:FriendlyName="DayOfWeek" msprop:DbColumnName="DayOfWeek" msprop:design-time-name="295c1db6-2d52-4498-8da9-112b90899d9a" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="15" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="IsWeekend" msprop:FriendlyName="IsWeekend" msprop:DbColumnName="IsWeekend" msprop:design-time-name="bb59e313-8139-4dec-890e-a8caa2074586" type="xs:boolean" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_Dim_Track" msprop:DbTableName="Dim_Track" msprop:FriendlyName="Dim_Track" msprop:TableType="Table" msprop:DbSchemaName="dbo" msprop:design-time-name="2b3e344b-4871-463a-8ba9-f1ce372e9e98">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="TrackKey" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:FriendlyName="TrackKey" msprop:DbColumnName="TrackKey" msprop:design-time-name="c4398dc1-8617-4885-b77a-5c8fc0ae55ae" type="xs:int" />
+                  <xs:element name="TrackName" msprop:FriendlyName="TrackName" msprop:DbColumnName="TrackName" msprop:design-time-name="29fed4d7-6da3-4004-a259-897a41808877">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="500" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="ReleasedYear" msprop:FriendlyName="ReleasedYear" msprop:DbColumnName="ReleasedYear" msprop:design-time-name="793b2a0b-e228-49fe-88b0-f54555a820e8" type="xs:int" minOccurs="0" />
+                  <xs:element name="ReleasedMonth" msprop:FriendlyName="ReleasedMonth" msprop:DbColumnName="ReleasedMonth" msprop:design-time-name="230622c9-5ea8-46c4-8a06-7ea1ed33d908" type="xs:int" minOccurs="0" />
+                  <xs:element name="ReleasedDay" msprop:FriendlyName="ReleasedDay" msprop:DbColumnName="ReleasedDay" msprop:design-time-name="92ce67e8-9b7f-4c43-8275-81c8d0604ea9" type="xs:int" minOccurs="0" />
+                  <xs:element name="InSpotifyPlaylists" msprop:FriendlyName="InSpotifyPlaylists" msprop:DbColumnName="InSpotifyPlaylists" msprop:design-time-name="04b38ddc-f682-47fd-974f-bf4678136a95" type="xs:int" minOccurs="0" />
+                  <xs:element name="InSpotifyCharts" msprop:FriendlyName="InSpotifyCharts" msprop:DbColumnName="InSpotifyCharts" msprop:design-time-name="aeb893bc-3d84-4b71-b62a-89f37da813b8" type="xs:int" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_Fact_StreamActivity" msprop:DbTableName="Fact_StreamActivity" msprop:FriendlyName="Fact_StreamActivity" msprop:TableType="Table" msprop:DbSchemaName="dbo" msprop:design-time-name="aa429026-36c1-4ac9-8d72-0fb403efd86e">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="StreamKey" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:FriendlyName="StreamKey" msprop:DbColumnName="StreamKey" msprop:design-time-name="3135e45b-c55c-4313-abc9-a94f62867526" type="xs:int" />
+                  <xs:element name="TrackKey" msprop:FriendlyName="TrackKey" msprop:DbColumnName="TrackKey" msprop:design-time-name="9ecf01ff-7121-4c83-9153-cc4c04425fdc" type="xs:int" />
+                  <xs:element name="ArtistKey" msprop:FriendlyName="ArtistKey" msprop:DbColumnName="ArtistKey" msprop:design-time-name="323a777f-002e-4e5f-8977-f677827c2e4f" type="xs:int" />
+                  <xs:element name="TimeKey" msprop:FriendlyName="TimeKey" msprop:DbColumnName="TimeKey" msprop:design-time-name="dc41fc51-4206-43a1-bbbd-84302cebf022" type="xs:int" />
+                  <xs:element name="AudioFeatureKey" msprop:FriendlyName="AudioFeatureKey" msprop:DbColumnName="AudioFeatureKey" msprop:design-time-name="ab8e4c39-48c5-4d73-928e-3f5fa9f47930" type="xs:int" />
+                  <xs:element name="PlatformKey" msprop:FriendlyName="PlatformKey" msprop:DbColumnName="PlatformKey" msprop:design-time-name="60240d9b-fd33-464f-9ffc-4d74cd7cfe07" type="xs:int" />
+                  <xs:element name="Streams" msprop:FriendlyName="Streams" msprop:DbColumnName="Streams" msprop:design-time-name="64d71bde-fb30-4ec1-913a-1ee2e734722c" type="xs:long" minOccurs="0" />
+                  <xs:element name="ArtistCount" msprop:FriendlyName="ArtistCount" msprop:DbColumnName="ArtistCount" msprop:design-time-name="623423b9-8a95-4174-ac1e-2eade0b2519a" type="xs:int" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:choice>
+        </xs:complexType>
+        <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_Dim_Artist" />
+          <xs:field xpath="ArtistKey" />
+        </xs:unique>
+        <xs:unique name="dbo_Dim_AudioFeature_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_Dim_AudioFeature" />
+          <xs:field xpath="AudioFeatureKey" />
+        </xs:unique>
+        <xs:unique name="dbo_Dim_Platform_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_Dim_Platform" />
+          <xs:field xpath="PlatformKey" />
+        </xs:unique>
+        <xs:unique name="dbo_Dim_Time_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_Dim_Time" />
+          <xs:field xpath="TimeKey" />
+        </xs:unique>
+        <xs:unique name="dbo_Dim_Track_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_Dim_Track" />
+          <xs:field xpath="TrackKey" />
+        </xs:unique>
+        <xs:unique name="dbo_Fact_StreamActivity_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_Fact_StreamActivity" />
+          <xs:field xpath="StreamKey" />
+        </xs:unique>
+        <xs:keyref name="FK__Fact_Stre__TimeK__4222D4EF" refer="dbo_Dim_Time_Constraint1">
+          <xs:selector xpath=".//dbo_Fact_StreamActivity" />
+          <xs:field xpath="TimeKey" />
+        </xs:keyref>
+        <xs:keyref name="FK__Fact_Stre__Track__403A8C7D" refer="dbo_Dim_Track_Constraint1">
+          <xs:selector xpath=".//dbo_Fact_StreamActivity" />
+          <xs:field xpath="TrackKey" />
+        </xs:keyref>
+        <xs:keyref name="FK__Fact_Stre__Audio__4316F928" refer="dbo_Dim_AudioFeature_Constraint1">
+          <xs:selector xpath=".//dbo_Fact_StreamActivity" />
+          <xs:field xpath="AudioFeatureKey" />
+        </xs:keyref>
+        <xs:keyref name="FK__Fact_Stre__Artis__412EB0B6" refer="Constraint1">
+          <xs:selector xpath=".//dbo_Fact_StreamActivity" />
+          <xs:field xpath="ArtistKey" />
+        </xs:keyref>
+        <xs:keyref name="FK__Fact_Stre__Platf__440B1D61" refer="dbo_Dim_Platform_Constraint1">
+          <xs:selector xpath=".//dbo_Fact_StreamActivity" />
+          <xs:field xpath="PlatformKey" />
+        </xs:keyref>
+      </xs:element>
+    </xs:schema>
+    <Spotify_x0020_DW xmlns="" />
+  </Schema>
+</DataSourceView>
